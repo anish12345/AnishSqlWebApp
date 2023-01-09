@@ -29,7 +29,9 @@ namespace AnishSqlWebApp.Services
 
             // return new SqlConnection(_builder.ConnectionString);
 
-            return new SqlConnection(_configuration.GetConnectionString("SqlConnection"));
+            // return new SqlConnection(_configuration.GetConnectionString("SqlConnection"));
+
+            return new SqlConnection(_configuration["SqlConnection"]);
         }
 
         public List<Product> GetProducts()
