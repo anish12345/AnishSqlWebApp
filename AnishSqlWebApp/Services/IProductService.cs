@@ -4,6 +4,7 @@ namespace AnishSqlWebApp.Services
 {
     public interface IProductService
     {
-        List<Product> GetProducts();
+        // List<Product> GetProducts();
+        Task<List<Product>> GetProducts();
     }
 }

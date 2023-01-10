@@ -14,11 +14,12 @@ namespace AnishSqlWebApp.Pages
         {
             _productService = productService;
         }
-        public void OnGet()
+        public async void OnGet()
         {
             //ProductService productService = new ProductService();
-            Products = _productService.GetProducts();
-            
+            // Products = _productService.GetProducts();
+            Products = _productService.GetProducts().GetAwaiter().GetResult();
+
         }
     }
 }
